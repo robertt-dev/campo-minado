@@ -64,7 +64,6 @@ public class Campo {
     }
 
     boolean vizinhancaSegura(){
-
         return vizinhos.stream().noneMatch(v -> v.minado);
     }
 
@@ -72,8 +71,12 @@ public class Campo {
         return marcado;
     }
 
+    void setAberto(boolean aberto) {
+        this.aberto = aberto;
+    }
+
     public void minar() {
-            minado = true;
+        minado = true;
     }
 
     public boolean isMinado() {
